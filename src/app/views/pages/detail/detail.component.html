@@ -1,0 +1,154 @@
+<div class="section-breadcrumb">
+  <div class="container">
+    <div class="content">
+      <h2 class="breadcrumb-title">
+        {{product.name}}
+      </h2>
+      <div class="breadcrumb-small">
+        <a href="#" [routerLink]="['']">Trang chủ</a>
+        <span>/</span>
+        <a href="#" routerLink="/category/{{product.category['slug']}}">{{product.category['name']}}</a>
+        <span>/</span>
+        <a routerLink="/detail/{{product.slug}}">{{product.name}}</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section-product-order">
+  <div class="container">
+    <div class="product-single">
+      <div class="product-single-photo">
+        <div class="photo-wrap">
+          <div class="photo-viewport" id="photo-viewport">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide" *ngFor="let image of product.images">
+                  <div class="splide__slide__container">
+                    <img src="{{image}}">
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="splide photo-controls">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide" *ngFor="let image of product.images">
+                  <div class="splide__slide__container">
+                    <img src="{{image}}">
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-single-content">
+        <div class="product-header">
+          <h1 class="product-title">{{product.name}}</h1>
+          <div>
+            <span>Mã hàng:</span> <span class="text-primary"> {{product.code}}</span> |
+            <span>Trạng thái: </span><span class="text-primary" *ngIf="product.status_product=='active'; else elseStatus_product">Còn hàng</span>
+                       <ng-template #elseStatus_product><span class="text-danger">Hết hàng</span></ng-template>
+          </div>
+        </div>
+        <div class="product-body">
+          <div class="product-body-wrap">
+            <div class="product-info">
+              <div class="product-price">
+                <span *ngIf="product.price; else elseContact">{{product.price}} ₫</span>
+                <ng-template #elseContact><span>Liên hệ</span></ng-template>
+              </div>
+              <div class="product-desc">
+                <p [innerHTML]="product.description">
+                </p>
+              </div>
+            </div>
+            <div class="product-policy">
+              <button class="btn-policy"><i class="fa fa-credit-card" aria-hidden="true"></i><span>Tư vấn tận tâm nhiệt tình</span>
+              </button>
+              <button class="btn-policy"><i class="fa fa-truck"
+                                            aria-hidden="true"></i><span>Giao hàng tận nơi</span></button>
+              <button class="btn-policy"><i class="fa fa-life-ring"
+                                            aria-hidden="true"></i><span>Khảo sát lắp đặt nhanh</span>
+              </button>
+              <button class="btn-policy"><i class="fas fa-redo"></i><span>Hỗ trợ và bảo hành tận nơi</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="product-footer">
+          <div class="product-size-hotline">
+            <span class="product-hotline"><i class="fa fa-phone" aria-hidden="true"></i> Hotline hỗ trợ:  </span>
+            <a href="#">0902 719 168 - 0963 384 379</a>
+          </div>
+          <div class="product-order">
+            <p class="product-order-title">Số lượng</p>
+            <div class="product-order-wrap">
+              <div class="product-quantity">
+                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="quantity-left-minus btn btn-number"
+                                                data-type="minus" data-field="">
+                                          <i class="fas fa-minus"></i>
+                                        </button>
+                                    </span>
+                  <input type="text" id="quantity" name="quantity" class="form-control input-number quantity"
+                         value="10"
+                         min="1" max="100">
+                  <span class="input-group-btn">
+                                        <button type="button" class="quantity-right-plus btn btn-number"
+                                                data-type="plus" data-field="">
+                                           <i class="fas fa-plus"></i>
+                                        </button>
+                                    </span>
+                </div>
+              </div>
+              <button class="btn btn-primary" *ngIf="!product.price; else elsePrice">LIÊN HỆ</button>
+              <ng-template #elsePrice>
+                <button class="btn btn-primary"><i class="fa fa-shopping-cart"></i></button>
+                <button class="btn btn-primary">MUA NGAY</button>
+              </ng-template>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section-product-detail">
+  <div class="container">
+    <div class="main-content">
+      <div class="content">
+        <div class="product-detail-header">
+          <ul class="nav nav-tabs">
+            <li class="active">
+              <button type="button" class="btn active" data-toggle="tab" href="#desc">Mô tả sản phẩm</button>
+            </li>
+            <li>
+              <button type="button" class="btn" data-toggle="tab" href="#comment">Bình luận</button>
+            </li>
+          </ul>
+        </div>
+        <div class="product-detail-body">
+
+          <div class="tab-content">
+            <div id="desc" class="tab-pane fade in active show" [innerHTML]="product.content">
+            </div>
+            <div id="comment" class="tab-pane fade">
+              <div class="manga-comment-wrap facebook-comment">
+                <div class="fb-comments w-100"
+                     data-href="https://developers.facebook.com/docs/plugins/comments#configurator"
+                     data-numposts="5" data-width="100%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="aside">
+
+      </div>
+    </div>
+  </div>
+</div>

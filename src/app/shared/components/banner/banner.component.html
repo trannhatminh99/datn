@@ -1,0 +1,10 @@
+<img  src="{{banner['image']}}" alt="">
+<div class="slider-content">
+  <div class="slider-text">
+    {{banner['name']}}
+  </div>
+  <div class="slider-description">
+    {{banner['description']}}
+  </div>
+  <a class="btn btn-primary mt-2" *ngIf="banner['link']" href="{{banner['link']}}" >Xem thêm</a>
+</div>

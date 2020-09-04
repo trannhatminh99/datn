@@ -1,13 +1,153 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
 <head>
   <meta charset="utf-8">
-  <title>MyApp</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Frontend Seed 4</title>
   <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/latn/images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/latn/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/latn/images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/latn/images/favicons/site.webmanifest">
+  <link rel="mask-icon" href="/assets/latn/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/assets/latn/images/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="/assets/latn/images/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="canonical" href="http://">
+  <meta name="title" content="Frontend Seed 4 - Title">
+  <meta name="referrer" content="unsafe-url">
+  <meta name="description" content="Frontend Seed 4 - Description">
+
+  <meta property="fb:app_id" content="your_app_id">
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="article:publisher" content="">
+  <meta property="article:section" content="Article">
+  <meta property="article:published_time" content="">
+  <meta property="article:modified_time" content="">
+  <meta property="og:updated_time" content="">
+  <meta property="og:image" content="">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:image" content="">
+  <meta name="twitter:creator" content="">
+  <!-- App CSS -->
+  <style>
+    :root {
+      --theme-color: #007bff;
+      --bg-color: #ffffff;
+    }
+
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    .app-loading {
+      background: var(--bg-color);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes bouncing-loader {
+      to {
+        opacity: 0.1;
+        transform: translate3d(0, -1rem, 0);
+      }
+    }
+
+    .app-loading .bouncing-loader {
+      display: flex;
+      justify-content: center;
+    }
+
+    .app-loading .bouncing-loader > div {
+      width: 1rem;
+      height: 1rem;
+      margin: 3rem 0.2rem;
+      background: var(--theme-color);
+      border-radius: 50%;
+      animation: bouncing-loader 0.6s infinite alternate;
+    }
+
+    .app-loading .bouncing-loader > div:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .app-loading .bouncing-loader > div:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+  </style>
+  <link rel='preload' href='/assets/latn/dist/app.min.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="/assets/latn/dist/app.min.css">
+  </noscript>
+  <!--  <link rel="stylesheet" href="css/style.css">-->
+  <link rel="stylesheet" href="/assets/latn/customs/style.css">
+  <link rel="stylesheet" href="/assets/latn/third_party/splide-master/dist/css/splide.min.css">
 </head>
+
 <body>
+<div class="app-loading">
+  <div class="bouncing-loader">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
   <app-root></app-root>
+<div id="fb-root"></div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+<!-- Core JavaScript -->
+<!--<script src="dist/core.min.js"></script>-->
+<script src="/assets/latn/third_party/modernizr.min.js"></script>
+<script src="/assets/latn/third_party/slick/slick/slick.js"></script>
+<script src="/assets/latn/third_party/lazyload/lazyload.min.js.map"></script>
+<script src="/assets/latn/third_party/splide-master/dist/js/splide.min.js"></script>
+<script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v8.0&appId=2759734777485686&autoLogAppEvents=1"
+        nonce="bAlDkWl7"></script>
+<!-- End Core JavaScript -->
+<!-- JavaScript -->
+<!--<script src="dist/app.min.js"></script>-->
+<script src="/assets/latn/customs/script.js"></script>
+<!-- End JavaScript -->
 </body>
 </html>
+
+
