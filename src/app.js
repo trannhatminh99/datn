@@ -161,7 +161,6 @@ function order() {
 $(window).scroll(function(){
   var sticky = $('body'),
     scroll = $(window).scrollTop();
-  console.log(scroll);
 
   if (scroll >= 79) sticky.addClass('body-fixed');
   else sticky.removeClass('body-fixed');

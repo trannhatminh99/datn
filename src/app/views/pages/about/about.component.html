@@ -1,1 +1,19 @@
-<p>about works!</p>
+<div class="section section-cate">
+  <div class="container">
+    <div class="main-content">
+      <div class="aside">
+        <app-list-product></app-list-product>
+        <div class="mt-5"></div>
+        <app-list-news></app-list-news>
+      </div>
+      <div class="content">
+        <div class="box-title">
+          <h3 class="box-text">{{about.name}}</h3>
+        </div>
+        <div class="box-content" [innerHTML]="about.content">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

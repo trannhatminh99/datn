@@ -1,0 +1,31 @@
+<div class="section section-cate">
+  <div class="container">
+    <div class="main-content">
+      <div class="aside">
+        <app-list-product></app-list-product>
+      </div>
+      <div class="content">
+        <div class="box-title">
+          <h3 class="box-text">TIN TỨC</h3>
+        </div>
+        <div class="box-content">
+          <div class="row block-news">
+            <div class="col-12 col-md-6" *ngFor="let new of news">
+              <app-card-news
+                [card]="new"></app-card-news>
+            </div>
+          </div>
+        </div>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item" *ngIf="pager['current_page'] > 1"><a class="page-link" [routerLink]="['/news']" [queryParams]="{ page: 1 }"><i class="fas fa-angle-double-left"></i></a></li>
+            <li class="page-item" *ngIf="pager['current_page'] > 1"><a class="page-link" [routerLink]="['/news']" [queryParams]="{ page: pager['current_page'] - 1 }"><i class="fas fa-angle-left"></i></a></li>
+            <li class="page-item" *ngFor="let page of range(pager['total_pages'], pager['current_page']);" [ngClass]="{active:pager['current_page'] === page}"><a class="page-link" [routerLink]="['/news']" [queryParams]="{ page: page }">{{page}}</a></li>
+            <li class="page-item" *ngIf="pager['total_pages'] > pager['current_page']"><a class="page-link" [routerLink]="['/news']" [queryParams]="{ page: pager['current_page'] + 1 }"><i class="fas fa-angle-right"></i></a></li>
+            <li class="page-item" *ngIf="pager['total_pages'] > pager['current_page']"><a class="page-link" [routerLink]="['/news']" [queryParams]="{ page: pager['total_pages'] }"><i class="fas fa-angle-double-right"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

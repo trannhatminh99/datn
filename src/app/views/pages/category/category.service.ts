@@ -19,8 +19,4 @@ export class CategoryService {
   getCategory(slug): Observable<Category> {
     return this.apiService.get<Category>(`/categories/${slug}`);
   }
-
-  getRelatedNews(): Observable<Products[]> {
-    return this.apiService.get<Products[]>(`/news/related`);
-  }
 }

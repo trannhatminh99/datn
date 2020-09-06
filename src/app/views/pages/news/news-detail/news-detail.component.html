@@ -1,0 +1,37 @@
+<div class="section section-cate">
+  <div class="container">
+    <div class="main-content">
+      <div class="aside">
+        <app-list-product></app-list-product>
+      </div>
+      <div class="content">
+        <div class="article-wrap">
+          <div class="article-container">
+            <div class="card card-article">
+              <div class="card card-article">
+                <div class="card-body">
+                  <h1 class="card-title">{{news.name}}</h1>
+                  <div class="card-meta">
+                    <span>{{news.author_name}}</span>
+                    <span class="time"><i class="icon-clock"></i> {{news.published_at}}</span>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="article-main">
+                <div class="article-body">
+                  <p class="article-sapo">{{news.description}}
+                  </p>
+                  <div class="article-content" [innerHTML]="news.content">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

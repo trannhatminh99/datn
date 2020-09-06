@@ -11,7 +11,6 @@ import {Category} from '../../../model/category';
 })
 export class CategoryComponent implements OnInit {
   products: Products[];
-  relatedNews: Products[];
   category: Category;
   pager: Products[];
   slug: string;
@@ -27,7 +26,6 @@ export class CategoryComponent implements OnInit {
         this.loadPageByCate(this.slug, params.page);
       });
     });
-    this.loadRelatedNews();
   }
 
   private loadCategory(slug) {
@@ -36,11 +34,6 @@ export class CategoryComponent implements OnInit {
     });
   }
 
-  private loadRelatedNews() {
-    this.categoryService.getRelatedNews().subscribe(data => {
-      this.relatedNews = data['data'];
-    });
-  }
   private loadPageByCate(slug, page) {
     this.categoryService.getListProductByCategory(slug, page).subscribe(data => {
       this.products = data['data'];

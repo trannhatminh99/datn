@@ -1,0 +1,15 @@
+<div class="aside-menu aside-menu-product">
+  <div class="aside-menu-title">
+    <div class="aside-menu-title-icon">
+      <i class="fas fa-list"></i>
+    </div>
+    <div class="aside-menu-title-text">
+      <span>Sản phẩm</span>
+    </div>
+  </div>
+  <div class="aside-menu-content">
+    <div class="card-list">
+      <app-card class="card" *ngFor="let product of products" [card]="product"></app-card>
+    </div>
+  </div>
+</div>

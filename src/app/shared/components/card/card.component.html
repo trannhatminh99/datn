@@ -3,11 +3,13 @@
     <img src="{{card['thumbnail']}}"></a>
 </div>
 <div class="card-body">
-  <h5 class="card-title"><a herf="#" [routerLink]="['/detail', card['slug']]">{{card['name']}}</a></h5>
-  <div class="card-price">
+  <h5 class="card-title {{card['category'].slug}}"><a herf="#" [routerLink]="['/detail', card['slug']]">{{card['name']}}</a></h5>
+  <div class="card-price {{card['category'].slug}}">
     <span class="current-price" *ngIf="card['price']; else elsePrice">{{card['price']}} ₫</span>
-    <ng-template #elsePrice><button type="button" class="btn btn-primary text-white current-price ml-auto mr-auto">Liên hệ</button></ng-template>
+    <ng-template #elsePrice><button type="button" class="btn btn-contact ml-auto mr-auto">Liên hệ</button></ng-template>
     <div class="original-price" *ngIf="card['discount_price']"><s>{{card['discount_price']}} ₫</s></div>
   </div>
 </div>
+
+
 

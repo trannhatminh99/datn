@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-img">
+    <a [routerLink]="['/news', card.slug]">
+      <img class="lazy"
+           data-src="{{card.thumbnail}}"
+           alt="{{card.name}}">
+    </a>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><a [routerLink]="['/news', card.slug]">{{card.name}}</a></h5>
+    <a [routerLink]="['/news', card.slug]">Xem chi tiết</a>
+    <!--<div class="card-author">
+      <i class="fas fa-user"></i>
+      Phạm Đình Vũ
+    </div>
+    <p class="card-desc">Some quick example text to build on the card title and make up the bulk of
+      the card's content.</p>-->
+  </div>
+</div>

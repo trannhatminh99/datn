@@ -37,25 +37,6 @@
             </div>
           </div>
         </div>
-        <div class="slider-list-full">
-          <div class="slider-about-list">
-            <div class="slider-about-item">
-              <a href="#">
-                <img class="lazy" data-src="./dummy/product/7.jpg" alt="">
-              </a>
-            </div>
-            <div class="slider-about-item">
-              <a href="#">
-                <img class="lazy" data-src="./dummy/product/7.jpg" alt="">
-              </a>
-            </div>
-            <div class="slider-about-item">
-              <a href="#">
-                <img class="lazy" data-src="./dummy/product/7.jpg" alt="">
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -65,7 +46,7 @@
     <div class="box-header">
       <h2 class="box-title">Dịch vụ kỹ thuật</h2>
       <p class="box-desc">Nghiên cứu, tư vấn, thiết kế, thi công các công trình điện, điện tử, viễn thông, công nghệ
-        thông tin và tự động hóa... <a [routerLink]="['category','dich-vu-ky-thuat']">Xem tất cả</a></p>
+        thông tin và tự động hóa... <a [routerLink]="['category','dich-vu-ky-thuat']" style="color: red">Xem tất cả</a></p>
     </div>
     <div class="box-content">
       <div class="product-top product-list">
@@ -73,6 +54,36 @@
           <app-card class="card" [card]="techProduct"></app-card>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+<div class="section section-products section-head">
+  <div class="container">
+    <div class="box-header">
+      <h2 class="box-title">Dịch vụ sức khoẻ</h2>
+      <p class="box-desc">Nhà phân phối sản phẩm máy tập thể dục của các hãng nổi tiếng như BH Fitness, Advantek, Kaesun, Impetus... <a [routerLink]="['category','dich-vu-suc-khoe']">Xem tất cả</a></p>
+    </div>
+    <div class="box-content">
+      <div class="product-featured product-list">
+        <div class="product-item" *ngFor="let healthProduct of healthProducts">
+          <app-card class="card" [card]="healthProduct"></app-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section section-products section-edu">
+  <div class="container">
+    <div class="box-header">
+      <h2 class="box-title">Dịch vụ đào tạo</h2>
+      <p class="box-desc">Nhà phân phối sản phẩm máy tập thể dục của các hãng nổi tiếng như BH Fitness, Advantek, Kaesun, Impetus... <a [routerLink]="['category','dich-vu-dao-tao']" style="color: #ff8c00">Xem tất cả</a></p>
+    </div>
+    <div class="box-content">
+      <div class="product-featured product-list">
+        <div class="product-item" *ngFor="let eduProduct of eduProducts">
+          <app-card class="card" [card]="eduProduct"></app-card>
+        </div>
+       </div>
     </div>
   </div>
 </div>
@@ -108,21 +119,6 @@
           <span>Dịch vụ khảo sát và báo giá hoàn toàn miễn phí</span>
         </li>
       </ul>
-    </div>
-  </div>
-</div>
-<div class="section section-products section-head">
-  <div class="container">
-    <div class="box-header">
-      <h2 class="box-title">Dịch vụ sức khoẻ</h2>
-      <p class="box-desc">Nhà phân phối sản phẩm máy tập thể dục của các hãng nổi tiếng như BH Fitness, Advantek, Kaesun, Impetus... <a [routerLink]="['category','dich-vu-suc-khoe']">Xem tất cả</a></p>
-    </div>
-    <div class="box-content">
-      <div class="product-featured product-list">
-        <div class="product-item" *ngFor="let healthProduct of healthProducts">
-          <app-card class="card" [card]="healthProduct"></app-card>
-        </div>
-      </div>
     </div>
   </div>
 </div>
@@ -191,21 +187,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-<div class="section section-products section-edu">
-  <div class="container">
-    <div class="box-header">
-      <h2 class="box-title">Dịch vụ đào tạo</h2>
-      <p class="box-desc">Nhà phân phối sản phẩm máy tập thể dục của các hãng nổi tiếng như BH Fitness, Advantek, Kaesun, Impetus... <a [routerLink]="['category','dich-vu-dao-tao']">Xem tất cả</a></p>
-    </div>
-    <div class="box-content">
-      <div class="product-featured product-list">
-        <div class="product-item" *ngFor="let eduProduct of eduProducts">
-          <app-card class="card" [card]="eduProduct"></app-card>
-        </div>
-       </div>
     </div>
   </div>
 </div>

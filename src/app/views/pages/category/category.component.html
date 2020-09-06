@@ -2,23 +2,7 @@
   <div class="container">
     <div class="main-content">
       <div class="aside">
-        <div class="aside-menu">
-          <div class="aside-menu-title">
-            <div class="aside-menu-title-icon">
-              <i class="fas fa-rss"></i>
-            </div>
-            <div class="aside-menu-title-text">
-              <span> TIN TỨC & TƯ VẤN</span>
-            </div>
-          </div>
-          <div class="aside-menu-content">
-            <ul class="aside-menu-nav">
-              <li class="nav-item" *ngFor="let news of relatedNews">
-                <a class="nav-link" href="#"><span>{{news.name}}</span></a>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <app-list-news></app-list-news>
       </div>
       <div class="content">
         <div class="title-nav">

@@ -9,12 +9,16 @@ import {CategoryComponent} from './category/category.component';
 import {HttpClientModule} from '@angular/common/http';
 import {ContactComponent} from './contact/contact.component';
 import {SharedModule} from '../../shared/shared.module';
-import { DetailComponent } from './detail/detail.component';
+import {DetailComponent} from './detail/detail.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import {NewsComponent} from './news/news.component';
+import { NewsDetailComponent } from './news/news-detail/news-detail.component';
+import { CartComponent } from './cart/cart.component';
+import { CheckoutsComponent } from './checkouts/checkouts.component';
 
 
 @NgModule({
-  declarations: [PagesComponent, HomeComponent, AboutComponent, CategoryComponent, ContactComponent, DetailComponent],
+  declarations: [PagesComponent, HomeComponent, AboutComponent, CategoryComponent, ContactComponent, DetailComponent, NewsComponent, NewsDetailComponent, CartComponent, CheckoutsComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,
