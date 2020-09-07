@@ -85,8 +85,14 @@
               <button class="btn" type="button" id="dropdownUser" data-toggle="dropdown" aria-haspopup="true"
                       aria-expanded="false"><i class="fas fa-user"></i></button>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownUser">
-                <a class="dropdown-item" href="#">Đăng nhập</a>
-                <a class="dropdown-item" href="#">Đăng ký</a>
+                <div *ngIf="auth; else elseAuth">
+                  <a class="dropdown-item" (click)="logout()">Đăng xuất</a>
+                </div>
+                <ng-template #elseAuth>
+                  <a class="dropdown-item" href="#" [routerLink]="['/auth/login']">Đăng nhập</a>
+                  <a class="dropdown-item" href="#" [routerLink]="['/auth/register']">Đăng ký</a>
+                </ng-template>
+
               </div>
             </div>
             <button class="btn" type="button"><i class="fas fa-cart-plus"></i></button>

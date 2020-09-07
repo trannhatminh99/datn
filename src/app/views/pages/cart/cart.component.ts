@@ -13,7 +13,6 @@ export class CartComponent implements OnInit {
 
   cart: [];
   STORAGE_KEY: string = 'cart';
-
   ngOnInit(): void {
     this.cart = this.storage.get(this.STORAGE_KEY) || [];
   }
@@ -32,15 +31,15 @@ export class CartComponent implements OnInit {
   }
 
   addNumberProduct(value, total: number) {
-   this.cart[value]['number_product'] = total + 1;
-    this.storage.set(this.STORAGE_KEY, this.cart);
+   // this.cart[value]['number_product'] = total + 1;
+   //  this.storage.set(this.STORAGE_KEY, this.cart);
   }
   removeNumberProduct(value, total: number) {
     if(total < 2) {
       return false;
     }
-   this.cart[value]['number_product'] = total - 1;
-    this.storage.set(this.STORAGE_KEY, this.cart);
+   // this.cart[value]['number_product'] = total - 1;
+   //  this.storage.set(this.STORAGE_KEY, this.cart);
   }
 
 }

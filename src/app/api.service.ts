@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {environment} from '../environments/environment';
-import {HttpClient, HttpParams} from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { retry } from 'rxjs/operators';
 
@@ -22,8 +22,9 @@ export class ApiService {
     if (typeof body === 'object') {
       body = JSON.stringify(body);
     }
+    const options = {headers: new HttpHeaders({ 'Content-Type': 'application/json' }), params};
 
-    return this.httpClient.post<any>(this.apiUrl + url, body, {params});
+    return this.httpClient.post<any>(this.apiUrl + url, body, options);
   }
 
   put<T>(url: string, body: any = {}, params?: any): Observable<T> {

@@ -9,6 +9,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { TestComponent } from './test/test.component';
 import {StorageServiceModule} from 'ngx-webstorage-service';
 import { Test1Component } from './test1/test1.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {AuthModule} from './views/pages/auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { Test1Component } from './test1/test1.component';
     LayoutsModule,
     HttpClientModule,
     StorageServiceModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

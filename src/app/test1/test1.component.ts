@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-test1',
@@ -7,14 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Test1Component implements OnInit {
 
-  constructor() { }
-  myArray = [1, 2, 3, 4, 5];
+  constructor(fb: FormBuilder) {
+
+  }
 
   ngOnInit(): void {
-  }
-  removeItem(index){
-
-    this.myArray.splice(index, 1);
-
   }
 }

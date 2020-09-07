@@ -15,6 +15,7 @@ import {NewsComponent} from './news/news.component';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutsComponent } from './checkouts/checkouts.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -24,7 +25,9 @@ import { CheckoutsComponent } from './checkouts/checkouts.component';
     PagesRoutingModule,
     HttpClientModule,
     SharedModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class PagesModule {
